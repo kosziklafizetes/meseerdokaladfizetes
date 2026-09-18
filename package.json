@@ -1,0 +1,19 @@
+{
+  "name": "meseerdo-kalandnap-2026",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Meseerdő Családi Kalandnap 2026 – Renderre kész jegyregisztrációs weboldal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2",
+    "pg": "^8.16.3"
+  }
+}

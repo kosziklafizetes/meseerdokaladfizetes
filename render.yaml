@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: meseerdo-kalandnap-2026
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: meseerdo-kalandnap-db
+          property: connectionString
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ACCOUNT_NAME
+        sync: false
+      - key: ACCOUNT_NUMBER
+        sync: false
+
+databases:
+  - name: meseerdo-kalandnap-db
+    plan: free
+    region: frankfurt
+    databaseName: meseerdo
+    user: meseerdo
